@@ -1,4 +1,4 @@
-# Prof. Geraldo Justiniano — protótipo
+# Prof. Geraldo Justiniano dos Reis — protótipo
 
 Website institucional em desenvolvimento. O conteúdo e as condições comerciais ainda serão revisados com o professor.
 

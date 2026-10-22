@@ -5,10 +5,11 @@ export type Offering = {
   title: string
   description: string
   facts: string[]
-  publishedPrice?: string
+  price: string
 }
 
 export const instagramUrl = 'https://www.instagram.com/gjdosreis/'
+export const whatsappUrl = 'https://wa.me/5531991048239'
 
 export const offerings: Offering[] = [
   {
@@ -16,9 +17,9 @@ export const offerings: Offering[] = [
     number: '01',
     label: 'Curso de teologia',
     title: 'Curso Maior de Introdução à Teologia Católica',
-    description: 'Uma introdução à teologia católica em aulas quinzenais.',
-    facts: ['Aulas quinzenais', '20h', 'Discord ou Google Meet'],
-    publishedPrice: 'R$ 350,00 por mês',
+    description: 'Uma introdução à teologia católica com aulas gravadas e discussões sobre os temas estudados.',
+    facts: ['Aulas quinzenais gravadas', 'Disputas mensais entre os alunos, mediadas pelo professor', 'Bate-papo pelo WhatsApp sobre os temas das aulas'],
+    price: 'R$ 350,00 por mês',
   },
   {
     id: 'catequese',
@@ -27,7 +28,7 @@ export const offerings: Offering[] = [
     title: 'Comentário ao Catecismo Romano',
     description: 'Comentários quinzenais para o estudo e a explicação do Catecismo Romano.',
     facts: ['Comentários quinzenais', 'Estudo do Catecismo Romano'],
-    publishedPrice: 'R$ 15,00 por mês',
+    price: 'R$ 15,00 por mês',
   },
   {
     id: 'consultoria',
@@ -36,12 +37,6 @@ export const offerings: Offering[] = [
     title: 'Consultoria Filosófico-Teológica',
     description: 'Apoio ao estudo, à reflexão crítica e à construção de teses e argumentos, com referência à tradição católica e à filosofia clássica.',
     facts: ['Métodos de estudo', 'Reflexão crítica', 'Teses e argumentos'],
-    publishedPrice: 'R$ 350,00 por mês',
+    price: 'R$ 400,00 por mês',
   },
 ]
-
-export const community = {
-  title: 'Escritório Papal',
-  description: 'Uma comunidade de estudos no WhatsApp, com diferentes professores e discussões sobre diversos assuntos.',
-  facts: ['Comunidade no WhatsApp', 'Diferentes professores', 'Assinatura mensal'],
-}

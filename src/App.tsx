@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import scholasticStudy from './assets/art/hero-scholastic.jpg'
-import gesu from './assets/art/gesu-interior.jpg'
 import jesuitEmblem from './assets/art/jesuit-ihs.svg'
-import { community, instagramUrl, offerings, type Offering } from './content'
+import { instagramUrl, offerings, whatsappUrl, type Offering } from './content'
 import './App.css'
 
 function InterestLink({ children = 'Conversar pelo Instagram' }: { children?: string }) {
@@ -23,7 +22,7 @@ function OfferingRow({ offering }: { offering: Offering }) {
           <summary>Informações <span aria-hidden="true">＋</span></summary>
           <div className="details-content">
             <ul>{offering.facts.map(fact => <li key={fact}>{fact}</li>)}</ul>
-            {offering.publishedPrice && <p className="price-note">Valor divulgado: {offering.publishedPrice}. Sujeito a confirmação com o professor.</p>}
+            <p className="price-note">Valor: {offering.price}.</p>
             <InterestLink>Consultar interesse</InterestLink>
           </div>
         </details>
@@ -42,9 +41,9 @@ function App() {
       <div className="top-rule" aria-hidden="true" />
       <header className="site-header">
         <div className="container header-inner">
-          <a className="brand" href="#inicio" onClick={closeMenu} aria-label="Prof. Geraldo Justiniano, voltar ao início">
+          <a className="brand" href="#inicio" onClick={closeMenu} aria-label="Prof. Geraldo Justiniano dos Reis, voltar ao início">
             <img className="brand-mark" src={jesuitEmblem} alt="" aria-hidden="true" width="52" height="52" />
-            <span className="brand-text"><strong>Geraldo Justiniano</strong><small>Filosofia &amp; Teologia</small></span>
+            <span className="brand-text"><strong>Geraldo Justiniano dos Reis</strong><small>Filosofia &amp; Teologia</small></span>
           </a>
           <button className="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? 'Fechar' : 'Menu'} <span aria-hidden="true">{menuOpen ? '×' : '☰'}</span>
@@ -53,7 +52,6 @@ function App() {
             <a href="#inicio" onClick={closeMenu}>Início</a>
             <a href="#atividades" onClick={closeMenu}>Formações</a>
             <a href="#apresentacao" onClick={closeMenu}>O professor</a>
-            <a href="#comunidade" onClick={closeMenu}>Comunidade</a>
             <a className="nav-contact" href="#contato" onClick={closeMenu}>Entrar em contato <span aria-hidden="true">↗</span></a>
           </nav>
         </div>
@@ -66,7 +64,7 @@ function App() {
           <div className="container hero-inner">
             <div className="hero-copy">
               <p className="hero-kicker"><span className="gold-line" /> Fides · Ratio · Traditio</p>
-              <h1 id="hero-title">A busca da Verdade,<br />à luz da <em>Tradição.</em></h1>
+              <h1 id="hero-title">A busca da Verdade{' '}<br />à luz da <em>Tradição Escolástica.</em></h1>
               <p className="hero-lead">Um convite ao estudo da teologia católica e da filosofia clássica, em diálogo com o patrimônio intelectual da Igreja.</p>
               <div className="hero-actions">
                 <a className="primary-link" href="#atividades">Conhecer as formações <span aria-hidden="true">↗</span></a>
@@ -84,7 +82,7 @@ function App() {
           <div className="container introduction-grid">
             <div className="introduction-copy">
               <p className="eyebrow">O professor</p>
-              <h2 id="introduction-title">Geraldo <em>Justiniano.</em></h2>
+              <h2 id="introduction-title">Geraldo <em>Justiniano dos Reis.</em></h2>
               <div className="introduction-footer">
                 <p>Geraldo Justiniano dos Reis é teólogo autônomo e bacharel em Filosofia. Seu trabalho concentra-se no estudo da Escolástica, sobretudo da tradição suareziana. Atua oferecendo cursos e consultorias.</p>
                 <span className="section-flourish" aria-hidden="true">✣</span>
@@ -103,42 +101,25 @@ function App() {
           </div>
         </section>
 
-        <section className="interlude" aria-label="Referência artística">
-          <div className="interlude-image"><img src={gesu} alt="Interior da Igreja do Gesù, em Roma" loading="lazy" /></div>
-          <div className="interlude-text">
-            <p className="eyebrow">Arte e pensamento</p>
-            <p>A riqueza da tradição visual. <em>A clareza necessária à leitura.</em></p>
-            <span>Referência visual: Igreja do Gesù, Roma</span>
-          </div>
-        </section>
-
-        <section className="community" id="comunidade" aria-labelledby="community-title">
-          <div className="container community-grid">
-            <div className="community-seal" aria-hidden="true"><span>EP</span><small>Comunidade</small></div>
-            <div className="community-copy">
-              <p className="eyebrow">Um espaço coletivo</p>
-              <h2 id="community-title">{community.title}</h2>
-              <p>{community.description}</p>
-              <ul>{community.facts.map(fact => <li key={fact}>{fact}</li>)}</ul>
-              <p className="community-note">Valor da assinatura e programação ainda não confirmados.</p>
-            </div>
-            <div className="community-action"><InterestLink>Conhecer a comunidade</InterestLink></div>
-          </div>
-        </section>
-
         <section className="contact" id="contato" aria-labelledby="contact-title">
           <div className="container contact-grid">
             <div><p className="eyebrow">Contato</p><h2 id="contact-title">Continue a <em>conversa.</em></h2></div>
-            <div className="contact-side"><p>Para saber mais sobre as atividades e manifestar interesse, use o canal público do professor.</p><InterestLink>Visitar o Instagram</InterestLink></div>
+            <div className="contact-side">
+              <p>Para saber mais sobre as atividades e manifestar interesse, entre em contato com o professor.</p>
+              <div className="contact-links">
+                <InterestLink>Visitar o Instagram</InterestLink>
+                <a className="interest-link whatsapp-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
       <footer className="site-footer">
-        <div className="container footer-main"><span>Prof. Geraldo Justiniano</span><a href="#inicio">Voltar ao início ↑</a></div>
+        <div className="container footer-main"><span>Prof. Geraldo Justiniano dos Reis</span><a href="#inicio">Voltar ao início ↑</a></div>
         <div className="container credits">
           <span>Protótipo visual · Conteúdo em revisão</span>
-          <span>Imagem conceitual do protótipo fornecido pelo usuário · <a href="https://commons.wikimedia.org/wiki/File:Interior_Gesu_Rome.jpg" target="_blank" rel="noopener noreferrer">Igreja do Gesù: Jastrow, domínio público</a>. Cortes e ajustes de cor aplicados.</span>
+          <span>Imagem conceitual do protótipo fornecido pelo usuário.</span>
         </div>
       </footer>
     </>

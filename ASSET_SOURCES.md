@@ -18,4 +18,4 @@
 - Arquivo: https://commons.wikimedia.org/wiki/File:Interior_Gesu_Rome.jpg
 - Fotógrafo: Jastrow, 2006.
 - Licença: domínio público por declaração do autor (PD-self), conforme a página do arquivo.
-- Uso no protótipo: cópia local em `src/assets/art/gesu-interior.jpg` (960 px), com corte, escurecimento e ajuste de cor por CSS.
+- Arquivo local preservado em `src/assets/art/gesu-interior.jpg` (960 px), sem uso na página após a remoção da seção visual.
