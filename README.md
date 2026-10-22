@@ -13,9 +13,7 @@ bun run dev
 
 O workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) compila e publica a pasta `dist` em cada push na branch `main`.
 
-1. Envie a branch `main` para `https://github.com/Dheovani/portfolio-geraldo`.
-2. Em **Settings → Pages → Build and deployment**, selecione **GitHub Actions** como fonte.
-3. Aguarde o workflow **Publish prototype to GitHub Pages**. O endereço será `https://dheovani.github.io/portfolio-geraldo/`.
+O repositório já usa **GitHub Actions** como fonte de publicação. Para atualizar o protótipo, envie alterações à branch `main` e aguarde o workflow **Publish prototype to GitHub Pages**. Endereço: `https://dheovani.github.io/portfolio-geraldo/`.
 
 O build usa `/portfolio-geraldo/` apenas no GitHub Pages; o servidor local continua na raiz.
 
