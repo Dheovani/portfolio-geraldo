@@ -1,32 +1,22 @@
-# React + TypeScript + Vite
+# Prof. Geraldo Justiniano — protótipo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Website institucional em desenvolvimento. O conteúdo e as condições comerciais ainda serão revisados com o professor.
 
-Currently, two official plugins are available:
+## Desenvolvimento local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```sh
+bun install
+bun run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Publicação no GitHub Pages
+
+O workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) compila e publica a pasta `dist` em cada push na branch `main`.
+
+1. Envie a branch `main` para `https://github.com/Dheovani/portfolio-geraldo`.
+2. Em **Settings → Pages → Build and deployment**, selecione **GitHub Actions** como fonte.
+3. Aguarde o workflow **Publish prototype to GitHub Pages**. O endereço será `https://dheovani.github.io/portfolio-geraldo/`.
+
+O build usa `/portfolio-geraldo/` apenas no GitHub Pages; o servidor local continua na raiz.
+
+Antes de divulgar publicamente, confirme o direito de uso da imagem do cabeçalho indicada em [`ASSET_SOURCES.md`](ASSET_SOURCES.md).
