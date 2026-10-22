@@ -86,7 +86,7 @@ function App() {
               <p className="eyebrow">O professor</p>
               <h2 id="introduction-title">Geraldo <em>Justiniano.</em></h2>
               <div className="introduction-footer">
-                <p>Geraldo Justiniano é filósofo autônomo, formado em Filosofia. Seu trabalho se concentra sobretudo na filosofia escolástica suareziana, ligada à obra de Francisco Suárez. Atua no ensino de filosofia e teologia e oferece acompanhamento a quem deseja aprofundar seus estudos nessas áreas.</p>
+                <p>Geraldo Justiniano dos Reis é teólogo autônomo e bacharel em Filosofia. Seu trabalho concentra-se no estudo da Escolástica, sobretudo da tradição suareziana. Atua oferecendo cursos e consultorias.</p>
                 <span className="section-flourish" aria-hidden="true">✣</span>
               </div>
             </div>
