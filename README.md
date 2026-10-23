@@ -1,19 +1,26 @@
-# Prof. Geraldo Justiniano dos Reis — protótipo
+# Prof. Geraldo Justiniano dos Reis
 
-Website institucional em desenvolvimento. O conteúdo e as condições comerciais ainda serão revisados com o professor.
+Website institucional estático feito com Astro e CSS. Os cursos e links de contato estão em `src/content.ts`.
 
 ## Desenvolvimento local
 
 ```sh
-bun install
+bun ci
 bun run dev
+```
+
+Para validar a compilação e conferir o resultado local:
+
+```sh
+bun run build
+bun run preview
 ```
 
 ## Publicação no GitHub Pages
 
 O workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) compila e publica a pasta `dist` em cada push na branch `main`.
 
-O repositório usa **GitHub Actions** como fonte de publicação. O build usa a raiz `/` para funcionar em `https://geraldojustiniano.com/`.
+O repositório usa **GitHub Actions** como fonte de publicação. O Astro gera uma página estática na raiz `/` para `https://geraldojustiniano.com/`.
 
 O domínio `geraldojustiniano.com` já está configurado em **Settings → Pages → Custom domain**. Depois de enviar as alterações à branch `main`:
 

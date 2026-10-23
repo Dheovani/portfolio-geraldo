@@ -1,0 +1,145 @@
+---
+import scholasticStudy from '../assets/art/hero-scholastic.jpg'
+import jesuitEmblem from '../assets/art/jesuit-ihs.svg'
+import { instagramUrl, offerings, whatsappUrl } from '../content'
+import '../index.css'
+import '../App.css'
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#14110f" />
+    <meta name="description" content="Cursos de teologia e catequese e consultoria filosófico-teológica do Prof. Geraldo Justiniano dos Reis." />
+    <title>Prof. Geraldo Justiniano dos Reis — Teologia, Filosofia e Formação</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <div class="top-rule" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Prof. Geraldo Justiniano dos Reis, voltar ao início">
+          <img class="brand-mark" src={jesuitEmblem.src} alt="" aria-hidden="true" width="52" height="52" />
+          <span class="brand-text"><strong>Geraldo Justiniano dos Reis</strong><small>Filosofia &amp; Teologia</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false">
+          <span class="menu-label">Menu</span> <span class="menu-symbol" aria-hidden="true">☰</span>
+        </button>
+        <nav id="main-navigation" class="site-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#atividades">Formações</a>
+          <a href="#apresentacao">O professor</a>
+          <a class="nav-contact" href="#contato">Entrar em contato <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-visual" aria-hidden="true"><img src={scholasticStudy.src} alt="" fetchpriority="high" /></div>
+        <div class="hero-ring" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="hero-kicker"><span class="gold-line"></span> Fides · Ratio · Traditio</p>
+            <h1 id="hero-title">A busca da Verdade <br />à luz da <em>Tradição Escolástica.</em></h1>
+            <p class="hero-lead">Um convite ao estudo da teologia católica e da filosofia clássica, em diálogo com o patrimônio intelectual da Igreja.</p>
+            <div class="hero-actions">
+              <a class="primary-link" href="#atividades">Conhecer as formações <span aria-hidden="true">↗</span></a>
+              <a class="secondary-link" href="#apresentacao">Sobre o professor <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <span>Estudo visual · conteúdo em revisão</span>
+            <a href="#apresentacao">Descubra <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="introduction" id="apresentacao" aria-labelledby="introduction-title">
+        <div class="container introduction-grid">
+          <div class="introduction-copy">
+            <p class="eyebrow">O professor</p>
+            <h2 id="introduction-title">Geraldo <em>Justiniano dos Reis.</em></h2>
+            <div class="introduction-footer">
+              <p>Geraldo Justiniano dos Reis é teólogo autônomo e bacharel em Filosofia. Seu trabalho concentra-se no estudo da Escolástica, sobretudo da tradição suareziana. Atua oferecendo cursos e consultorias.</p>
+              <span class="section-flourish" aria-hidden="true">✣</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="offerings" id="atividades" aria-labelledby="offerings-title">
+        <div class="container">
+          <div class="offerings-heading">
+            <div><p class="eyebrow">Cursos e consultoria</p><h2 id="offerings-title">Caminhos de <em>estudo</em></h2></div>
+            <p>Três formas de aprofundamento, cada uma com sua proposta. Selecione “Informações” para ver os dados atualmente disponíveis.</p>
+          </div>
+          <div class="offering-list">
+            {offerings.map((offering) => (
+              <article class="offering-row" id={offering.id}>
+                <div class="offering-index"><span>{offering.number}</span><i aria-hidden="true"></i></div>
+                <div class="offering-main">
+                  <p class="eyebrow">{offering.label}</p>
+                  <h3>{offering.title}</h3>
+                  <p class="offering-description">{offering.description}</p>
+                </div>
+                <div class="offering-more">
+                  <details>
+                    <summary>Informações <span aria-hidden="true">＋</span></summary>
+                    <div class="details-content">
+                      <ul>{offering.facts.map((fact) => <li>{fact}</li>)}</ul>
+                      <p class="price-note">Valor: {offering.price}.</p>
+                      <a class="interest-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Consultar interesse <span aria-hidden="true">↗</span></a>
+                    </div>
+                  </details>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato" aria-labelledby="contact-title">
+        <div class="container contact-grid">
+          <div><p class="eyebrow">Contato</p><h2 id="contact-title">Continue a <em>conversa.</em></h2></div>
+          <div class="contact-side">
+            <p>Para saber mais sobre as atividades e manifestar interesse, entre em contato pelo Instagram ou com a secretaria pelo WhatsApp.</p>
+            <div class="contact-links">
+              <a class="interest-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Visitar o Instagram <span aria-hidden="true">↗</span></a>
+              <a class="interest-link whatsapp-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Falar com a secretaria pelo WhatsApp <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main"><span>Prof. Geraldo Justiniano dos Reis</span><a href="#inicio">Voltar ao início ↑</a></div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector<HTMLButtonElement>('.menu-toggle')
+      const navigation = document.querySelector<HTMLElement>('#main-navigation')
+      const menuLabel = menuToggle?.querySelector<HTMLElement>('.menu-label')
+      const menuSymbol = menuToggle?.querySelector<HTMLElement>('.menu-symbol')
+
+      function setMenuOpen(open: boolean) {
+        menuToggle?.setAttribute('aria-expanded', String(open))
+        navigation?.classList.toggle('is-open', open)
+        if (menuLabel) menuLabel.textContent = open ? 'Fechar' : 'Menu'
+        if (menuSymbol) menuSymbol.textContent = open ? '×' : '☰'
+      }
+
+      menuToggle?.addEventListener('click', () => {
+        setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true')
+      })
+
+      document.querySelectorAll('.site-header a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', () => setMenuOpen(false))
+      })
+    </script>
+  </body>
+</html>
