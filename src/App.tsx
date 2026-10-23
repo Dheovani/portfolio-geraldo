@@ -105,10 +105,10 @@ function App() {
           <div className="container contact-grid">
             <div><p className="eyebrow">Contato</p><h2 id="contact-title">Continue a <em>conversa.</em></h2></div>
             <div className="contact-side">
-              <p>Para saber mais sobre as atividades e manifestar interesse, entre em contato com o professor.</p>
+              <p>Para saber mais sobre as atividades e manifestar interesse, entre em contato pelo Instagram ou com a secretaria pelo WhatsApp.</p>
               <div className="contact-links">
                 <InterestLink>Visitar o Instagram</InterestLink>
-                <a className="interest-link whatsapp-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Conversar no WhatsApp <span aria-hidden="true">↗</span></a>
+                <a className="interest-link whatsapp-link" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Falar com a secretaria pelo WhatsApp <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
@@ -117,10 +117,6 @@ function App() {
 
       <footer className="site-footer">
         <div className="container footer-main"><span>Prof. Geraldo Justiniano dos Reis</span><a href="#inicio">Voltar ao início ↑</a></div>
-        <div className="container credits">
-          <span>Protótipo visual · Conteúdo em revisão</span>
-          <span>Imagem conceitual do protótipo fornecido pelo usuário.</span>
-        </div>
       </footer>
     </>
   )

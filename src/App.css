@@ -98,13 +98,10 @@ h1 em, h2 em { font-weight: 400; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
 .contact-links .whatsapp-link { border: 1px solid #7c3c32; color: #482622; background: transparent; }
 .contact-links .whatsapp-link:hover { background: #e0cfaf; }
-.site-footer { padding: 35px 0 25px; background: #100e0c; }
-.footer-main { display: flex; justify-content: space-between; gap: 2rem; padding-bottom: 38px; border-bottom: 1px solid rgba(225,196,138,.23); }
+.site-footer { padding: 35px 0; background: #100e0c; }
+.footer-main { display: flex; justify-content: space-between; gap: 2rem; }
 .footer-main span { font: 500 1.7rem var(--serif); }
 .footer-main a { color: var(--gold-bright); font-size: .8rem; text-decoration: none; }
-.credits { display: flex; justify-content: space-between; gap: 2rem; padding-top: 20px; color: #b9ac97; font-size: .68rem; line-height: 1.6; }
-.credits span:last-child { max-width: 620px; text-align: right; }
-.credits a { text-decoration-color: var(--gold); text-underline-offset: 3px; }
 @media (max-width: 1000px) {
   .header-inner { min-height: 76px; }
   .menu-toggle { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(225,196,138,.5); padding: 9px 11px; color: var(--gold-bright); background: rgba(16,14,12,.6); cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
@@ -139,8 +136,6 @@ h1 em, h2 em { font-weight: 400; }
   .offering-main h3 { font-size: clamp(2.6rem, 7vw, 4.5rem); }
   .contact-grid { align-items: flex-start; flex-direction: column; gap: 2.5rem; }
   .contact h2 { font-size: clamp(4.5rem, 12vw, 6rem); }
-  .credits { flex-direction: column; gap: 8px; }
-  .credits span:last-child { text-align: left; }
 }
 @media (max-width: 420px) {
   .brand-text strong { font-size: 15px; }
