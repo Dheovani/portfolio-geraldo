@@ -1,7 +1,8 @@
 ---
 import scholasticStudy from '../assets/art/hero-scholastic.jpg'
 import jesuitEmblem from '../assets/art/jesuit-ihs.svg'
-import { instagramUrl, offerings, whatsappUrl } from '../content'
+import geraldoPortrait from '../assets/people/geraldo-justiniano.jpeg'
+import { featuredTestimonial, instagramUrl, offerings, whatsappUrl } from '../content'
 import '../index.css'
 import '../App.css'
 ---
@@ -30,8 +31,8 @@ import '../App.css'
         </button>
         <nav id="main-navigation" class="site-nav" aria-label="Navegação principal">
           <a href="#inicio">Início</a>
-          <a href="#atividades">Formações</a>
           <a href="#apresentacao">O professor</a>
+          <a href="#atividades">Formações</a>
           <a class="nav-contact" href="#contato">Entrar em contato <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
@@ -46,19 +47,13 @@ import '../App.css'
             <p class="hero-kicker"><span class="gold-line"></span> Fides · Ratio · Traditio</p>
             <h1 id="hero-title">A busca da Verdade <br />à luz da <em>Tradição Escolástica.</em></h1>
             <p class="hero-lead">Um convite ao estudo da teologia católica e da filosofia clássica, em diálogo com o patrimônio intelectual da Igreja.</p>
-            <div class="hero-actions">
-              <a class="primary-link" href="#atividades">Conhecer as formações <span aria-hidden="true">↗</span></a>
-              <a class="secondary-link" href="#apresentacao">Sobre o professor <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-          <div class="hero-bottom">
-            <span>Estudo visual · conteúdo em revisão</span>
-            <a href="#apresentacao">Descubra <span aria-hidden="true">↓</span></a>
+            <a class="primary-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Abrir o Instagram <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
 
       <section class="introduction" id="apresentacao" aria-labelledby="introduction-title">
+        <div class="introduction-portrait" aria-hidden="true"><img src={geraldoPortrait.src} alt="" loading="lazy" /></div>
         <div class="container introduction-grid">
           <div class="introduction-copy">
             <p class="eyebrow">O professor</p>
@@ -68,6 +63,30 @@ import '../App.css'
               <span class="section-flourish" aria-hidden="true">✣</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="endorsement" id="recomendacao" aria-labelledby="endorsement-title">
+        <div class="container endorsement-grid">
+          <figure class="endorsement-figure">
+            <p class="eyebrow" id="endorsement-title">Recomendação</p>
+            <blockquote>
+              <span class="endorsement-mark" aria-hidden="true">“</span>
+              <p>{featuredTestimonial.quote}</p>
+            </blockquote>
+            <figcaption class="endorsement-author">
+              {featuredTestimonial.photo && (
+                <img src={featuredTestimonial.photo.src} alt={`Foto de ${featuredTestimonial.name}`} width="88" height="88" loading="lazy" />
+              )}
+              <span><strong>{featuredTestimonial.name}</strong><small>{featuredTestimonial.role}</small></span>
+            </figcaption>
+            {featuredTestimonial.bio && (
+              <details class="endorsement-bio">
+                <summary>Sobre {featuredTestimonial.name} <span aria-hidden="true">＋</span></summary>
+                <p>{featuredTestimonial.bio}</p>
+              </details>
+            )}
+          </figure>
         </div>
       </section>
 
@@ -85,6 +104,24 @@ import '../App.css'
                   <p class="eyebrow">{offering.label}</p>
                   <h3>{offering.title}</h3>
                   <p class="offering-description">{offering.description}</p>
+                  {offering.testimonials && offering.testimonials.length > 0 && (
+                    <details class="offering-annex">
+                      <summary>Relatos de alunos ({offering.testimonials.length}) <span aria-hidden="true">＋</span></summary>
+                      <div class="annex-list">
+                        {offering.testimonials.map((testimonial) => (
+                          <figure class="annex-item">
+                            <blockquote><p>{testimonial.quote}</p></blockquote>
+                            <figcaption>
+                              {testimonial.photo && (
+                                <img src={testimonial.photo.src} alt={`Foto de ${testimonial.name}`} width="48" height="48" loading="lazy" />
+                              )}
+                              <span><strong>{testimonial.name}</strong><small>{testimonial.role}</small></span>
+                            </figcaption>
+                          </figure>
+                        ))}
+                      </div>
+                    </details>
+                  )}
                 </div>
                 <div class="offering-more">
                   <details>
@@ -95,6 +132,14 @@ import '../App.css'
                       <a class="interest-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">Consultar interesse <span aria-hidden="true">↗</span></a>
                     </div>
                   </details>
+                  {offering.modules && (
+                    <details>
+                      <summary>Módulos <span aria-hidden="true">＋</span></summary>
+                      <div class="details-content">
+                        <ol class="module-list">{offering.modules.map((module) => <li>{module}</li>)}</ol>
+                      </div>
+                    </details>
+                  )}
                 </div>
               </article>
             ))}
