@@ -78,7 +78,7 @@ h1 em, h2 em { font-weight: 400; }
 .endorsement-bio[open] summary span, .offering-annex[open] summary span { transform: rotate(45deg); }
 .endorsement-bio p { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: .9rem; line-height: 1.75; }
 .offering-annex { margin-top: 32px; }
-.annex-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; padding-top: 24px; }
+.annex-list { display: grid; gap: 36px; max-width: 680px; padding-top: 24px; }
 .annex-item { margin: 0; padding-left: 18px; border-left: 1px solid rgba(213,182,125,.35); }
 .annex-item blockquote { margin: 0 0 16px; }
 .annex-item blockquote p { margin: 0; color: #e2d8c6; font-family: var(--serif); font-size: 1.2rem; font-style: italic; line-height: 1.45; }

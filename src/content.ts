@@ -2,6 +2,7 @@ import type { ImageMetadata } from 'astro'
 import arthurJordanPhoto from './assets/people/arthur-jordan.jpg'
 import brunoFortePhoto from './assets/people/bruno-forte.jpeg'
 import dheovaniXavierPhoto from './assets/people/dheovani-xavier.png'
+import douglasRodriguesPhoto from './assets/people/douglas-rodrigues.jpeg'
 
 export type Testimonial = {
   name: string
@@ -68,6 +69,12 @@ export const offerings: Offering[] = [
         role: 'Aluno',
         quote: 'O professor Geraldo foi um presente de Deus na minha vida. Estava sem rumo na minha vida intelectual, não sabia como começar e qual rumo seguir. Quando eu conheci e conversei com o professor eu imediatamente percebi que se tratava de uma pessoas diferenciada. O curso de teologia é a prova disso, o professor consegue sintetizar e transmitir nas aulas uma tradição filosófica e teológica robusta e na minha opinião isso faz do professor Geraldo um verdadeiro mestre, além de um grande amigo.',
         photo: brunoFortePhoto
+      },
+      {
+        name: 'Douglas Rodrigues',
+        role: 'Aluno',
+        quote: 'Entre tantas graças que Deus nos concede, não é pequena aquela de encontrar bons mestres, capazes de nos conduzir, com segurança e profundidade, ao conhecimento das verdades divinas. Poucas coisas são tão nobres, como nos ensinam os grandes Doutores da Igreja, quanto dedicar a inteligência ao conhecimento de Deus e colocar os frutos desse estudo a serviço de outras almas. E é precisamente isso que tenho encontrado no Curso Maior de Introdução à Teologia Católica. Sou particularmente grato ao professor pela riqueza dos ensinamentos, pela seriedade com que aborda cada questão e, sobretudo, pela fidelidade à doutrina da Igreja. Tenho plena convicção de que são raríssimos, no Brasil e mesmo fora dele, os teólogos que possuem a capacidade intelectual do professor Geraldo. E que Nosso Senhor continue a abençoar este trabalho e a fazer frutificar tudo aquilo que nele aprendemos.',
+        photo: douglasRodriguesPhoto
       }
     ],
   },
