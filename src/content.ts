@@ -3,6 +3,9 @@ import arthurJordanPhoto from './assets/people/arthur-jordan.jpg'
 import brunoFortePhoto from './assets/people/bruno-forte.jpeg'
 import dheovaniXavierPhoto from './assets/people/dheovani-xavier.png'
 import douglasRodriguesPhoto from './assets/people/douglas-rodrigues.jpeg'
+import lucasCarvalhoPhoto from './assets/people/lucas-carvalho.jpeg'
+import fabioVieiraPhoto from './assets/people/fabio-vieira.jpeg'
+import maverickYliasterPhoto from './assets/people/maverick-yliaster.png'
 
 export type Testimonial = {
   name: string
@@ -56,7 +59,6 @@ export const offerings: Offering[] = [
       'Teologia dogmática geral',
       'Noções de teologia dogmática especial',
     ],
-    // Relatos de alunos: nome completo e, de preferência, foto em src/assets/people/
     testimonials: [
       {
         name: 'Dheovani Xavier',
@@ -86,6 +88,25 @@ export const offerings: Offering[] = [
     description: 'Comentários quinzenais para o estudo e a explicação do Catecismo Romano.',
     facts: ['Comentários quinzenais', 'Estudo do Catecismo Romano'],
     price: 'R$ 15,00 por mês',
+    testimonials: [
+      {
+        name: 'Lucas Carvalho de Almeida',
+        role: 'Catequizando',
+        quote: 'Em geral, as catequeses no Brasil, tanto paroquiais quanto vinculadas a comunidades de leigos, padecem do problema de não fornecerem razões que justifiquem as proposições mais elementares da fé (como o Credo ou as petições do Pai-Nosso), mesmo à luz dos textos fornecidos pelo Magistério. Os comentários do Prof.º Geraldo, muito embora focados em capítulos curtos do Catecismo Romano, têm este poder explanatório que falta às catequeses comuns; além disso,  procedem de maneira intensiva, não extensiva, o que favorece a meditação dos dogmas de fé elucidados, seja ao modo intelectual, seja ao modo devocional, como o mistério da Encarnação que perpassa os Mistérios Gozosos do Santo Rosário.',
+        photo: lucasCarvalhoPhoto
+      },
+      {
+        name: 'Fábio V. Blangis',
+        role: 'Catequizando',
+        quote: 'Em meio ao meu retorno ao Catolicismo, conheci o Professor Geraldo, de quem já ouvira as melhores referências. Não poderia ter feito escolha melhor ao ingressar em seu curso: minhas expectativas eram altas e, ainda assim, fui positivamente surpreendido. Geraldo é um jovem erudito, profundo conhecedor da Filosofia Escolástica, de seus fundamentos e de suas aplicações. O ensino cristão que ministra nos livra da nefasta ideologia modernista que corrói a sociedade. Como seu aluno, vejo realizadas nele as palavras de São João Paulo II: “A fé e a razão constituem como que as duas asas pelas quais o espírito humano se eleva para a contemplação da verdade”.',
+        photo: fabioVieiraPhoto
+      },
+      {
+        name: 'Emmanuel Braga',
+        role: 'Catequizando',
+        quote: 'O grande mérito dos comentários é apresentar um traço do método escolástico com a clareza da catequese. Ao levantar objeções reais e aplicar distinções metafísicas de forma acessível, a leitura deixa de ser mero repasse de informações para agregar de fato à formação do intelecto na medida em que instiga bastante ao estudo.'
+      }
+    ]
   },
   {
     id: 'consultoria',
@@ -95,5 +116,13 @@ export const offerings: Offering[] = [
     description: 'Apoio ao estudo, à reflexão crítica e à construção de teses e argumentos, com referência à tradição católica e à filosofia clássica.',
     facts: ['Métodos de estudo', 'Reflexão crítica', 'Teses e argumentos'],
     price: 'R$ 400,00 por mês',
+    testimonials: [
+      {
+        name: 'Maverick Yliaster',
+        role: 'Consultado',
+        quote: 'A consultoria que tive com o professor foi uma das grandes experiências da minha vida e um guia importantíssimo para meus estudos. Eu não sabia ao certo o que estudar e encontrava na internet apenas métodos mecânicos. O professor, porém, adotou outra abordagem, buscando identificar minhas inclinações intelectuais e compreender quais áreas seriam mais adequadas aos meus interesses e potencialidades. Isso me ensinou a direcionar meus esforços de maneira mais consciente e proveitosa.',
+        photo: maverickYliasterPhoto
+      }
+    ]
   },
 ]

@@ -106,7 +106,15 @@ import '../App.css'
                   <p class="offering-description">{offering.description}</p>
                   {offering.testimonials && offering.testimonials.length > 0 && (
                     <details class="offering-annex">
-                      <summary>Relatos de alunos ({offering.testimonials.length}) <span aria-hidden="true">＋</span></summary>
+                      <summary>
+                        {(
+                          offering.id === "curso-maior"
+                            ? "Relatos de alunos"
+                            : offering.id === "catequese"
+                              ? "Relatos de catequizandos"
+                              : "Relatos de clientes"
+                        )} ({offering.testimonials.length}) <span aria-hidden="true">＋</span>
+                      </summary>
                       <div class="annex-list">
                         {offering.testimonials.map((testimonial) => (
                           <figure class="annex-item">
