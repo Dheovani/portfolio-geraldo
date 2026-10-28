@@ -1,5 +1,6 @@
 import type { ImageMetadata } from 'astro'
 import arthurJordanPhoto from './assets/people/arthur-jordan.jpg'
+import arthurViniciusPhoto from './assets/people/arthur-vinicius.jpeg'
 import brunoFortePhoto from './assets/people/bruno-forte.jpeg'
 import dheovaniXavierPhoto from './assets/people/dheovani-xavier.png'
 import douglasRodriguesPhoto from './assets/people/douglas-rodrigues.jpeg'
@@ -126,7 +127,8 @@ export const offerings: Offering[] = [
       {
         name: 'Arthur Vinícius',
         role: 'Consulente',
-        quote: 'A consultoria que tive com o professor Geraldo foi muitíssimo satisfatória! Eram diversas dúvidas e questões que já estavam me perturbando já há alguns meses. Tais problemas me incomodavam e me faziam enxergar a dinâmica da Graça de Deus em nossa vida de uma forma completamente equivocada. E foi incrível como o professor conseguiu clarear todas as trevas em tão pouco tempo! O trabalho pedagógico do professor era de outro nível, ele conseguia deixar com que eu expunha meu raciocínio incorreto e, com total controle, me conduzia a enxergar os problemas no meu pensamento e a entender a posição correta com justificativas muito satisfatórias. O Geraldo não é mesmo qualquer teólogo, recomendo o seu trabalho de olhos fechados.'
+        quote: 'A consultoria que tive com o professor Geraldo foi muitíssimo satisfatória! Eram diversas dúvidas e questões que já estavam me perturbando já há alguns meses. Tais problemas me incomodavam e me faziam enxergar a dinâmica da Graça de Deus em nossa vida de uma forma completamente equivocada. E foi incrível como o professor conseguiu clarear todas as trevas em tão pouco tempo! O trabalho pedagógico do professor era de outro nível, ele conseguia deixar com que eu expunha meu raciocínio incorreto e, com total controle, me conduzia a enxergar os problemas no meu pensamento e a entender a posição correta com justificativas muito satisfatórias. O Geraldo não é mesmo qualquer teólogo, recomendo o seu trabalho de olhos fechados.',
+        photo: arthurViniciusPhoto
       }
     ]
   },
