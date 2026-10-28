@@ -119,9 +119,14 @@ export const offerings: Offering[] = [
     testimonials: [
       {
         name: 'Maverick Yliaster',
-        role: 'Consultado',
+        role: 'Consulente',
         quote: 'A consultoria que tive com o professor foi uma das grandes experiências da minha vida e um guia importantíssimo para meus estudos. Eu não sabia ao certo o que estudar e encontrava na internet apenas métodos mecânicos. O professor, porém, adotou outra abordagem, buscando identificar minhas inclinações intelectuais e compreender quais áreas seriam mais adequadas aos meus interesses e potencialidades. Isso me ensinou a direcionar meus esforços de maneira mais consciente e proveitosa.',
         photo: maverickYliasterPhoto
+      },
+      {
+        name: 'Arthur Vinícius',
+        role: 'Consulente',
+        quote: 'A consultoria que tive com o professor Geraldo foi muitíssimo satisfatória! Eram diversas dúvidas e questões que já estavam me perturbando já há alguns meses. Tais problemas me incomodavam e me faziam enxergar a dinâmica da Graça de Deus em nossa vida de uma forma completamente equivocada. E foi incrível como o professor conseguiu clarear todas as trevas em tão pouco tempo! O trabalho pedagógico do professor era de outro nível, ele conseguia deixar com que eu expunha meu raciocínio incorreto e, com total controle, me conduzia a enxergar os problemas no meu pensamento e a entender a posição correta com justificativas muito satisfatórias. O Geraldo não é mesmo qualquer teólogo, recomendo o seu trabalho de olhos fechados.'
       }
     ]
   },
